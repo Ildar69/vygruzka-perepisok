@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Выгрузка переписки",
+  "version": "0.2.0",
+  "description": "Правый клик по сообщению в WhatsApp Web или Telegram Web: один архив с текстом и всеми файлами от этого сообщения вниз.",
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*", "https://web.telegram.org/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}
